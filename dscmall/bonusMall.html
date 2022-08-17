@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/bonusMall.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<title>积分商城y</title>
+</head>
+
+<body>
+	<!-- 顶部导航 -->
+	<div class="topNav">
+		<div class="w1200">
+			<div class="topL">
+				<div class="city" id="city">
+					<i class="iconfont icon-map-marker1"></i>
+					<span>上海</span>
+					<div class="floors">
+						<!-- 白色线段 -->
+						<p></p>
+						<div class="content-wrap">
+							<ul class="floor-nav"></ul>
+							<div class="floor-wrap">
+								<div class="bar-wrap">
+									<div class="bar-line"></div>
+									<div class="bar"></div>
+								</div>
+								<div class="floor" id="floor"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="txtInfo">
+					<div class="login">
+						<a href="javascript:;" style="color: #F42828; ">请登录</a>
+					</div>
+					<div class="regist">
+						<a href="javascript:;">免费注册</a>
+					</div>
+				</div>
+			</div>
+			<ul class="topR">
+				<li>
+					<a href="javascript:;">我的订单</a>
+				</li>
+				<li></li>
+				<li>
+					<a href="javascript:;">我的浏览</a>
+				</li>
+				<li></li>
+				<li>
+					<a href="javascript:;">我的收藏</a>
+				</li>
+				<li></li>
+				<li>
+					<a href="javascript:;">客户服务</a>
+				</li>
+				<li></li>
+				<!-- 顶部右边网站导航 -->
+				<li class="li-dorpdown">
+					<div class="dt">网站导航<i class="iconfont icon-aui-icon-down"></i></div>
+					<div class="dd" style="z-index:99999">
+						<div></div>
+						<dl class="fore1">
+							<dt>特色主题</dt>
+							<dd>家用电器</dd>
+							<dd>手机数码</dd>
+							<dd>电脑办公</dd>
+						</dl>
+						<dl class="fore2">
+							<dt>促销活动</dt>
+							<dd>拍卖活动</dd>
+							<dd>共创商品</dd>
+							<dd>优惠活动</dd>
+							<dd>批发市场</dd>
+							<dd>超值礼包</dd>
+							<dd>优惠券</dd>
+						</dl>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部开始 -->
+	<header>
+		<div class="header-cen">
+			<div class="logo">
+				<img src="images/shop_logo.gif" alt="">
+				<img src="images/ecsc-join.gif" alt="">
+			</div>
+			<div class="form">
+				<form action="" method="get">
+					<input type="text" value="" placeholder="内衣">
+					<button type="submit">搜商品</button>
+					<button type="submit">搜店铺</button>
+				</form>
+				<ul class="keyword">
+					<li>周大福</li>
+					<li>内衣</li>
+					<li>Five Plus</li>
+					<li>手机</li>
+				</ul>
+			</div>
+			<div class="shop">
+				<i class="iconfont icon-cart-sim" style="color: red;font-size: 20px;"></i>
+				<span>我的购物车</span>
+				<div>0</div>
+			</div>
+			<!-- 头部购物车 -->
+			<div class="Layer">
+				<div class="prompt">
+					<b></b>
+					<span>购物车中还没有商品，赶紧选购吧！</span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- 导航栏开始 -->
+	<nav>
+		<div class="nav-cen">
+			<div>全部商品分类</div>
+			<ul>
+				<li>首页</li>
+				<li><a href="http://192.168.1.141/dscFood/foodindex.html">食品特产</a></li>
+				<li><a href="http://192.168.1.144/DSC/clothing.html">服装城</a></li>
+				<li>大家电</li>
+				<li>鞋靴箱包</li>
+				<li>品牌专区</li>
+				<li>聚划算</li>
+				<li><a href="http://192.168.1.142:3000/bonusMall.html">积分商城</a></li>
+				<li>预售</li>
+				<li>店铺街</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- banner开始 -->
+	<div class="banner">
+		<div class="banner-cen">
+			<div class="exchange">
+				<div class="exchange-top">
+					<figure>
+						<img src="images/touxiang.jpg" alt="">
+					</figure>
+					<strong>Hi,欢迎来到大商创</strong>
+				</div>
+				<div class="exchange-btm">
+					<button type="submit">请登录</button>
+					<button type="submit">立即注册</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- list开始 -->
+	<div class="List">
+		<ul></ul>
+	</div>
+	<!-- 商品部分开始 -->
+	<div class="main">
+		<dl>
+			<dt>排序:</dt>
+			<dd>默认<i class="iconfont icon-iconup"></i></dd>
+			<dd>兑换量<i class="iconfont icon-icondown"></i></dd>
+			<dd>积分值<i class="iconfont icon-icondown"></i></dd>
+		</dl>
+		<!-- 商品内容部分开始 -->
+		<ul id="listJson"></ul>
+	</div>
+	<!-- 底部开始 -->
+	<footer>
+		<div class="footer-top">
+			<div class="footer-Tcen">
+				<ul>
+					<li><i></i><span>七天包退</span></li>
+					<li><i></i><span>正品保障</span></li>
+					<li><i></i><span>好评如潮</span></li>
+					<li><i></i><span>闪电发货</span></li>
+					<li><i></i><span>权威荣耀</span></li>
+				</ul>
+				<ol>
+					<li><i></i><span>4000-000-000</span></li>
+					<li><i></i><span>咨询客服</span></li>
+				</ol>
+			</div>
+		</div>
+		<div class="footer-center">
+			<ul class="middle">
+				<dl>
+					<h3>配送与支付</h3>
+					<dd>上门自提</dd>
+					<dd>支付方式说明</dd>
+					<dd>配送支付智能查询</dd>
+				</dl>
+				<dl>
+					<h3>新手上路</h3>
+					<dd>隐私声明</dd>
+					<dd>订购方式</dd>
+					<dd>购物流程</dd>
+				</dl>
+				<dl>
+					<h3>联系我们</h3>
+					<dd>投诉与建议</dd>
+					<dd>选机咨讯</dd>
+					<dd>网站故障报告</dd>
+				</dl>
+				<dl>
+					<h3>服务保证</h3>
+					<dd>产品质量保障</dd>
+					<dd>售后保证保证</dd>
+					<dd>退换货原则</dd>
+				</dl>
+				<dl>
+					<h3>会员中心</h3>
+					<dd>我的订单</dd>
+					<dd>我的收藏</dd>
+					<dd>资金管理</dd>
+				</dl>
+				<ul>
+					<li><img src="images/ecjia_qrcode.png" alt="">
+						<p>ECJia</p>
+					</li>
+					<li><img src="images/ectouch_qrcode.png" alt="">
+						<p>ECTouch</p>
+					</li>
+				</ul>
+			</ul>
+		</div>
+		<!-- 页脚开始 -->
+		<div class="footer-bottom">
+			<div class="wrap">
+				<ul>
+					<li>首页</li>
+					<li></li>
+					<li>隐私保护</li>
+					<li></li>
+					<li>联系我们</li>
+					<li></li>
+					<li>免责条款</li>
+					<li></li>
+					<li>公司简介</li>
+					<li></li>
+					<li>商家入驻</li>
+					<li></li>
+					<li>意见反馈</li>
+				</ul>
+				<ul>
+					<li>模板堂</li>
+					<li></li>
+					<li>ECJia</li>
+					<li></li>
+					<li>ECTouch</li>
+					<li></li>
+					<li>电商学院</li>
+				</ul>
+				<p>© 2015-2018 dscmall.cn 版权所有 ICP备案证书号:DSC00000123 POWERED by大商创2.0</p>
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="js/bonusMall.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
